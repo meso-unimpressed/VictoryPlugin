@@ -1724,7 +1724,7 @@ static void SetBloomIntensity(APostProcessVolume* PostProcessVolume,float Intens
 		Stack.MostRecentProperty = nullptr;
 		Stack.StepCompiledIn<FArrayProperty>(NULL);
 		void* ArrayAddr = Stack.MostRecentPropertyAddress;
-		FArrayProperty* ArrayProperty = Cast<FArrayProperty>(Stack.MostRecentProperty);
+		FArrayProperty* ArrayProperty = CastField<FArrayProperty>(Stack.MostRecentProperty);
 		if (!ArrayProperty)
 		{
 			Stack.bArrayContextFailed = true;
@@ -1840,7 +1840,7 @@ static void SetBloomIntensity(APostProcessVolume* PostProcessVolume,float Intens
 		Stack.MostRecentProperty = nullptr;
 		Stack.StepCompiledIn<FArrayProperty>(NULL);
 		void* ArrayAddr = Stack.MostRecentPropertyAddress;
-		FArrayProperty* ArrayProperty = Cast<FArrayProperty>(Stack.MostRecentProperty);
+		FArrayProperty* ArrayProperty = CastField<FArrayProperty>(Stack.MostRecentProperty);
 		if (!ArrayProperty)
 		{
 			Stack.bArrayContextFailed = true;
